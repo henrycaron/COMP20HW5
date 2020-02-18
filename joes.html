@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Homework 5</title>
+</head>
+
+<body>
+	<h1>Welcome to Joe's Hotdogs!</h1>
+	
+	<script language="javascript">
+		document.write("<h2>Your Order</h2>");
+
+		var hd = prompt("How many hotdogs?", "0");
+		var ff = prompt("How many french fries?", "0");
+		var d = prompt("How many drinks?", "0");
+
+
+		document.write("#Hotdogs: " + hd + " at $3.25 is $" + (hd * 3.25).toFixed(2) + "<br />");
+		document.write("#French Fries: " + ff + " at $2.00 is $" + (ff * 2.00).toFixed(2) + "<br />");
+		document.write("#Drinks: " + d + " at $1.50 is $" + (d * 1.5).toFixed(2) + "<br />");
+
+		var subtotal = hd * 3.25 + ff * 2.00 + d * 1.5;
+		if(subtotal >= 20){
+			document.write("You qualified for our 10% discount. <br />");
+			subtotal = subtotal *.9;
+		}
+		
+		document.write("Subtotal: $" + subtotal.toFixed(2) + "<br />");
+		var tax = subtotal * .0625;
+		document.write("Meals Tax: $" + tax.toFixed(2) + "<br />");
+		document.write("Total: $" + (subtotal + tax).toFixed(2) + "<br />");
+
+
+	</script>
+</body>
+</html>
